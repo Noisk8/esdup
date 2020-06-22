@@ -1,0 +1,275 @@
+/* Common styles for all menus */
+.menu {
+	line-height: 1;
+	margin: 0 auto 3em;
+}
+
+.menu__list {
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu__item {
+	display: block;
+	margin: 1em 0;
+}
+
+.menu__link {
+	font-size: 1.05em;
+	font-weight: bold;
+	display: block;
+	padding: 1em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.menu__link:hover,
+.menu__link:focus {
+	outline: none;
+}
+
+/* Individual styles */
+
+
+
+/* Ceres */
+.menu--ceres .menu__item {
+    position: relative;
+   
+}
+
+.menu--ceres .menu__link {
+	position: relative;
+	min-width: 115px;
+	height: 50px;
+	padding: 1em 1.5em;
+	text-align: center;
+	color: #FFFFFF;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.menu--ceres .menu__link:hover,
+.menu--ceres .menu__link:focus {
+	color: #929292;
+}
+
+.menu--ceres .menu__item--current .menu__link {
+	color: #d94f5c;
+}
+
+.menu--ceres .menu__item::before,
+.menu--ceres .menu__item::after,
+.menu--ceres .menu__link::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	background: #d94f5c;
+}
+
+.menu--ceres .menu__item::before,
+.menu--ceres .menu__item::after {
+	width: 2px;
+	height: 100%;
+	opacity: 0;
+	-webkit-transform: scale3d(1, 0, 1);
+	transform: scale3d(1, 0, 1);
+	-webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-transition: -webkit-transform 0s 0.1s, opacity 0.1s;
+	transition: transform 0s 0.1s, opacity 0.1s;
+}
+
+.menu--ceres .menu__item::before {
+	left: 0;
+}
+
+.menu--ceres .menu__item::after {
+	right: 0;
+}
+
+.menu--ceres .menu__item--current::before,
+.menu--ceres .menu__item--current::after {
+	opacity: 1;
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* bottom line */
+.menu--ceres .menu__link::after {
+	left: 0;
+	width: 100%;
+	height: 2px;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.menu--ceres .menu__item--current .menu__link::after {
+	-webkit-transform: translate3d(0, -48px, 0);
+	transform: translate3d(0, -48px, 0);
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+/* Horatio Styles */
+
+.menu--horatio .menu__item {
+	margin-left: 3px;
+	margin-right: 3px;
+	color: #4e3c3e;
+}
+
+.menu--horatio .menu__item {
+	position: relative;
+	-webkit-transition: color .25s;
+	transition: color .25s;
+}
+
+.menu--horatio .menu__item a {
+	position: relative;
+	color: inherit;
+}
+
+.menu--horatio .menu__item--current {
+	color: #b5b5b5;
+}
+
+.menu--horatio .menu__item:hover {
+	color: #d94f5c;
+}
+
+.menu--horatio .menu__item::before,
+.menu--horatio .menu__item::after,
+.menu--horatio .menu__item a::before,
+.menu--horatio .menu__item a::after {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 2px solid currentColor;
+}
+
+.menu--horatio .menu__item::before {
+	border-width: 0 0 0 2px;
+	-webkit-transform-origin: left bottom;
+	transform-origin: left bottom;
+}
+
+.menu--horatio .menu__item::after {
+	border-width: 0 2px 0 0;
+	-webkit-transform-origin: right top;
+	transform-origin: right top;
+}
+
+.menu--horatio .menu__item a::before,
+.menu--horatio .menu__item a::after {
+	z-index: 2;
+}
+
+.menu--horatio .menu__item a::before {
+	border-width: 2px 0 0;
+	-webkit-transform-origin: left top;
+	transform-origin: left top;
+}
+
+.menu--horatio .menu__item a::after {
+	border-width: 0 0 2px;
+	-webkit-transform-origin: right bottom;
+	transform-origin: right bottom;
+}
+
+.menu--horatio .menu__item--current::before,
+.menu--horatio .menu__item--current::after,
+.menu--horatio .menu__item:hover::before,
+.menu--horatio .menu__item:hover::after,
+.menu--horatio .menu__item--current a::before,
+.menu--horatio .menu__item--current a::after,
+.menu--horatio .menu__item:hover a::before,
+.menu--horatio .menu__item:hover a::after {
+	content: '';
+}
+
+.menu--horatio .menu__item:not(.menu__item--current):hover::before,
+.menu--horatio .menu__item:not(.menu__item--current):hover::after,
+.menu--horatio .menu__item:not(.menu__item--current):hover a::before,
+.menu--horatio .menu__item:not(.menu__item--current):hover a::after {
+	-webkit-animation: horatio-anim .6s ease-in-out;
+	animation: horatio-anim .6s ease-in-out;
+}
+
+.menu--horatio .menu__item:not(.menu__item--current):hover::before {
+	-webkit-animation-delay: -.45s;
+	animation-delay: -.45s;
+}
+
+.menu--horatio .menu__item:not(.menu__item--current):hover a::before {
+	-webkit-animation-delay: -.3s;
+	animation-delay: -.3s;
+}
+
+.menu--horatio .menu__item:not(.menu__item--current):hover::after {
+	-webkit-animation-delay: -.15s;
+	animation-delay: -.15s;
+}
+
+.menu--horatio .menu__item:not(.menu__item--current):hover a::after {
+	-webkit-animation-delay: 0;
+	animation-delay: 0;
+}
+
+@-webkit-keyframes horatio-anim {
+	0%, 33% {
+		opacity: 0;
+		-webkit-transform: rotate(45deg) scale(1.5);
+		transform: rotate(45deg) scale(1.5);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+
+/* End: tantalid Styles */
+
+/* YOUR STYLE (Shakespeare character name) see README.md for details */
+/* (Please copy these two lines and insert after your custom styles) */
+
+
+/* Name (by @you) */
+
+/* [Your styles here]*/
+
+/* End: Name Styles */
+
+
+/* Media queries */
+
+/* Stack items for smaller screens */
+@media screen and (max-width:55em) {
+	.menu__list {
+		display: block;
+		margin: 0 auto;
+	}
+}
