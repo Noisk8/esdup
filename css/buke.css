@@ -237,7 +237,8 @@ h3 {
 }
 
 h4 {
-    font-size: 20px
+    font-size: 17px;
+    color:#009688;
 }
 
 h5 {
@@ -1922,7 +1923,3 @@ a {
     border-color: #e7ffff!important
 }
 
-h4 {
-    font-size: 17px;
-    color:#009688;
-}
