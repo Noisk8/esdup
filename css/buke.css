@@ -1921,3 +1921,8 @@ a {
 .w3-hover-border-pale-blue:hover {
     border-color: #e7ffff!important
 }
+
+h4 {
+    font-size: 17px;
+    color:#009688;
+}
